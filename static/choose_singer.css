@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body 
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.755), rgba(0, 0, 0, 0.733)), url('rsc/melanie-van-leeuwen-QA-qQfWJM0E-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+h1 
+{
+    margin-bottom: 40px;
+    font-size: 64px;
+}
+input[type="text"] 
+{
+    width: 500px;
+    font-size: 16px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.button, .singer
+{
+    display: flex;
+    justify-content: center;
+}
+input[type="submit"]
+{
+    padding: 8px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.907);
+    border-radius: 5px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+input[type="submit"]:hover
+{
+    background-color: rgba(255, 255, 255, 0.175);
+}

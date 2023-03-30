@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Player</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function search() {
+        var prediction = $("#prediction").val();
+        $.post("/search", { prediction: prediction }, function (data) {
+          if (data == "success") {
+            $("#play-button").prop("disabled", false);
+            $("#pause-button").prop("disabled", false);
+            $("#next-button").prop("disabled", false);
+          } else {
+            alert("No track found.");
+          }
+        });
+      }
+
+      function play() {
+        $.get("/play");
+      }
+
+      function pause() {
+        $.get("/pause");
+      }
+      function next() {
+        $.get("/next");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Music Player</h1>
+    <p>Search for a song:</p>
+    <input type="text" id="prediction" />
+    <button onclick="search()">Search</button>
+    <br /><br />
+    <button id="play-button" onclick="play()" disabled>Play</button>
+    <button id="pause-button" onclick="pause()" disabled>Pause</button>
+    <button id="next-button" onclick="next()" disabled>Next</button>
+    <script src="script.js"></script>
+  </body>
+</html>

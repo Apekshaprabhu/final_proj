@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/register.css">
+    <link rel="icon" type="image/x-icon" href="static/rsc/favicon.png">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="outer-container">
+        <div class="form">
+            <div class="f">
+                <div class="heading">
+                    <h1>Sign Up</h1>
+                </div>
+                <div class="rest">
+                    <form method="POST" action="">
+                        {{ form.hidden_tag() }}
+                        <div class="username label-field">
+                            <div class="label">Username</div>  
+                            <div class="fd">
+                                {{ form.username(class='user field', placeholder = 'minimum 4 characters') }}
+                            </div> 
+                        </div>
+                        <div class="password label-field">
+                            <div class="label">Password</div>
+                            <div class="fd">
+                                {{ form.password(class='pass field', placeholder = 'minimum 8 characters') }}
+                            </div>
+                        </div>
+                        <div class="submit-button">{{ form.submit(class='submit') }}</div>
+                        <div class="link">
+                            Already have an account ? <a href="{{ url_for('login') }}">Log In</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: rgb(58, 58, 58);
+}
+h1
+{
+    margin-bottom: 40px;
+    font-size: 50px;
+    text-align: center;
+}
+.button
+{
+    display: flex;
+    justify-content: center;
+}
+input[type="radio"] 
+{
+    display: none;
+}
+label 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box 
+{
+    width: 500px;
+    height: 80px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.kan
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.438), rgba(0, 0, 0, 0.438)), url('rsc/kan.jpg');
+}
+.hin 
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.438), rgba(0, 0, 0, 0.438)), url('rsc/hin.jpg');  
+}
+.eng
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.438), rgba(0, 0, 0, 0.438)), url('rsc/eng.jpeg');  
+}
+.west
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.438), rgba(0, 0, 0, 0.438)), url('rsc/west.webp');  
+}
+.box:hover 
+{
+    transition-duration: 1s;
+}
+.kan:hover
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.759), rgba(0, 0, 0, 0.753)), url('rsc/kan.jpg');
+}
+.hin:hover
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.748), rgba(0, 0, 0, 0.77)), url('rsc/hin.jpg');  
+}
+.eng:hover
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.779), rgba(0, 0, 0, 0.768)), url('rsc/eng.jpeg');  
+}
+.west:hover
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.774), rgba(0, 0, 0, 0.79)), url('rsc/west.webp');  
+}
+input[type="radio"]:checked + .kan 
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.759), rgba(0, 0, 0, 0.753)), url('rsc/kan.jpg');
+    transition-duration: 1s;
+}
+input[type="radio"]:checked + .hin
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.759), rgba(0, 0, 0, 0.753)), url('rsc/hin.jpg');
+    transition-duration: 1s;
+}
+input[type="radio"]:checked + .eng
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.759), rgba(0, 0, 0, 0.753)), url('rsc/eng.jpeg');
+    transition-duration: 1s;
+}
+input[type="radio"]:checked + .west
+{
+    background-image: linear-gradient(rgba(11, 11, 11, 0.759), rgba(0, 0, 0, 0.753)), url('rsc/west.webp');
+    transition-duration: 1s;
+}
+input[type="submit"]
+{
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(58, 58, 58);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}

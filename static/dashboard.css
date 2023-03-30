@@ -1,0 +1,162 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+.outer-container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.inner-container
+{
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+}
+.nav, .middle
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.middle
+{
+    flex-direction: column;
+    justify-content: center;
+}
+.nav 
+{
+    margin-bottom: 60px;
+}
+.logo 
+{
+    display: flex;
+    align-items: center;
+}
+.logo img 
+{
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+    margin-top: -5px;
+}
+.logo p 
+{
+    font-size: 24px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.second 
+{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.logout, .webcam button
+{
+    padding: 8px 30px;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(58, 58, 58);
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+.webcam button
+{
+    margin-top: 15px;
+}
+.webcam
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mood 
+{
+    width: 250px;
+    height: 140px;
+    margin: 20px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;   
+}
+.mood p 
+{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.happy 
+{
+    background-image: linear-gradient( rgba(45, 44, 44, 0.373), rgba(73, 72, 72, 0.5) ), url('rsc/happy.jpg');
+}
+.sad
+{
+    background-image: linear-gradient( rgba(45, 44, 44, 0.373), rgba(73, 72, 72, 0.5) ),url('rsc/sad.jpg');
+}
+.angry
+{
+    background-image: linear-gradient( rgba(45, 44, 44, 0.373), rgba(73, 72, 72, 0.5) ),url('rsc/angry.jpg');
+}
+.neutral
+{
+    background-image: linear-gradient( rgba(45, 44, 44, 0.373), rgba(73, 72, 72, 0.5) ),url('rsc/neutral.jpg');
+}
+
+.happy:hover
+{
+    background-image: linear-gradient( rgba(26, 26, 26, 0.773), rgba(73, 72, 72, 0.74) ), url('rsc/happy.jpg');
+}
+.sad:hover
+{
+    background-image: linear-gradient( rgba(26, 26, 26, 0.773), rgba(73, 72, 72, 0.74) ),url('rsc/sad.jpg');
+}
+.angry:hover
+{
+    background-image: linear-gradient( rgba(26, 26, 26, 0.773), rgba(73, 72, 72, 0.74) ),url('rsc/angry.jpg');
+}
+.neutral:hover
+{
+    background-image: linear-gradient( rgba(26, 26, 26, 0.773), rgba(73, 72, 72, 0.74) ),url('rsc/neutral.jpg');
+}
+.moods 
+{
+    display: flex;
+    flex-direction: column;
+}
+.mood-row 
+{
+    display: flex;
+}
+
+svg
+{
+    position: fixed;
+    bottom: -200px;
+    z-index: -1;
+}
+.or 
+{
+    text-align: center;
+    color: rgb(158, 153, 153);
+}
+

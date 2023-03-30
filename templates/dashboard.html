@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/dashboard.css">
+    <link rel="icon" type="image/x-icon" href="static/rsc/favicon.png">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="nav">
+                <div class="logo">
+                    <img src="static/rsc/icons8-bird-96.png" alt="">
+                    <p>symphony</p>
+                </div>
+                <div class="logout-button">
+                    <button class="logout">
+                        <a href="{{ url_for('home') }}">Logout</a>
+                    </button>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="heading">
+                    <p class="second">Hello user, How are you feeling today ?</p>
+                </div>
+                <div class="mood-grid">
+                    <div class="moods">
+                        <div class="mood-row">
+                            <div class="mood happy">
+                                <a href="https://youtube.com/playlist?list=PL5zqiCKMuDXWdRPs354hcUqBcn9HAndZG"><p>Happy</p></a>
+                            </div>
+                            <div class="mood right sad">
+                                <a href="https://youtube.com/playlist?list=PL5zqiCKMuDXUB9X76fjsEMZzGozU4_5hL"><p>Sad</p></a>
+                            </div>
+                        </div>
+                        <div class="mood-row">
+                            <div class="mood angry">
+                                <a href="https://youtube.com/playlist?list=PL5zqiCKMuDXXK0CnjaYNTHixSN4kf1kUX"><p>Angry</p></a>
+                            </div>
+                            <div class="mood right neutral">
+                                <a href="https://youtube.com/playlist?list=PL5zqiCKMuDXWY2wAQ0975KcMVYSCG4yYJ">
+                                <p>Neutral</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="or">or</p>
+                </div>
+                <div class="right">
+                    <div class="image"></div>
+                </div>
+                </div>
+                <div class="webcam">
+                  <button class="detect-mood">
+                    <a href="/choose_lang">
+                      Detect mood using camera</a>
+                    </button>
+                  </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

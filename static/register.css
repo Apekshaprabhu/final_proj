@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(58, 58, 58);
+}
+.outer-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* .logo
+{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo a
+{
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.logo img 
+{
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    margin-top: -5px;
+} */
+.form
+{
+    border-radius: 7px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    box-shadow: rgba(10, 10, 30, 0.04) 0px 4px 16px, rgba(10, 10, 30, 0.034) 0px 8px 32px;
+    height: 450px;
+}
+h1
+{
+    text-align: center;
+    color: rgb(58, 58, 58);
+    font-size: 28px;
+}
+.f 
+{
+    padding: 45px;
+}
+.rest
+{
+    margin-top: 26px;
+}
+.label-field, .submit-button, .link
+{
+    padding: 10px 0px;
+}
+.label-field div
+{
+    padding: 5px 0px;
+}
+.submit
+{
+    padding: 10px 18px;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    background-color: rgb(58, 58, 58);;
+    font-weight: bold;
+    color: white;
+    width: 275px;
+    cursor: pointer;
+}
+.field 
+{
+    width: 250px;
+    padding: 12px;
+    border: none;
+    background-color: rgb(245, 245, 245);
+    border-radius: 2px;
+}
+.link
+{
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+svg
+{
+    position: fixed;
+    bottom: -200px;
+    z-index: -1;
+}

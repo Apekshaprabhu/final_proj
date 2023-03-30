@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Choose language</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static', filename='choose_lang.css')}}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <div class="title">
+          <h1 class="display-4">Choose your language</h1>
+        </div>
+        <form action="{{url_for('choose_singer')}}" method="POST">
+          <label>
+            <input type="radio" name="language" value="Kannada"/>
+            <div class="box kan">ಕನ್ನಡ</div>
+          </label>
+          <label>
+            <input type="radio" name="language" value="hindi" />
+            <div class="box hin">हिन्दी</div></label>
+          <label>
+            <input type="radio" name="language" value="english" />
+            <div class="box eng">English</div>
+          </label>
+          <label>
+            <input type="radio" name="language" value="western" />
+            <div class="box west">Western</div>
+          </label>
+          <div class="button">
+            <input
+            type="submit"
+            name="btn"
+            value="Next"
+            class="btn btn-outline-success btn-lg"
+          />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
