@@ -30,6 +30,7 @@ sp = spotipy.Spotify(auth_manager=auth_manager)
 devices = sp.devices()
 device_id = devices['devices'][0]['id']
 track_uri = ''
+results = []
 
 app = Flask(__name__)
 db = SQLAlchemy(app)
@@ -147,6 +148,7 @@ def register():
 
 @app.route('/emotion_detect', methods=["POST"])
 def emotion_detect():
+    global results
     info['singer'] = request.form['singer']
 
     found = False
@@ -184,7 +186,7 @@ def emotion_detect():
     track_uri = results["tracks"]["items"][0]["uri"]
     sp.start_playback(device_id=device_id, uris=[track_uri])
 
-    # return render_template('index1.html')
+    return render_template('index1.html')
     # return redirect(url_for('play'))
 
     # link  = f"https://www.youtube.com/results?search_query={info['singer']}+{prediction}+{info['language']}+song"
@@ -192,7 +194,7 @@ def emotion_detect():
 
     # webbrowser.open(link)
 
-    return render_template("emotion_detect.html", data=prediction, link='')
+    # return render_template("emotion_detect.html", data=prediction, link='')
 
 
 @app.route('/search', methods=['POST'])
@@ -210,17 +212,27 @@ def search():
         return 'error'
 
 
-# @app.route('/play')
-# def play():
-#     if track_uri != '':
-#         sp.start_playback(uris=[track_uri])
-#         return 'success'
-#     else:
-#         return 'error'
+@app.route('/play')
+def play():
+    if track_uri != '':
+        sp.start_playback(uris=[track_uri])
+        return 'success'
+    else:
+        return 'error'
 
-# @app.route('/pause')
-# def pause():
-#     sp.pause_playback()
-#     return 'success'
+
+@app.route('/pause')
+def pause():
+    sp.pause_playback()
+    return 'success'
+
+
+@app.route('/next')
+def next():
+    track_uri = results["tracks"]["items"][1]["uri"]
+    sp.start_playback(device_id=device_id, uris=[track_uri])
+    return 'success'
+
+
 if __name__ == "__main__":
     app.run(debug=True)
